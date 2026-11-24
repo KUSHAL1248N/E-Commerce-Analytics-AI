@@ -1,0 +1,7 @@
+-- Run this once after importing the ecommerce_analytics schema and sample data.
+-- Replace the placeholder with a strong password containing letters/numbers only.
+-- Connect to TiDB as the cluster administrator/root user before running this.
+
+CREATE USER IF NOT EXISTS 'ai_reader'@'%' IDENTIFIED BY 'REPLACE_WITH_LONG_RANDOM_PASSWORD';
+GRANT SELECT ON ecommerce_analytics.* TO 'ai_reader'@'%';
+SHOW GRANTS FOR 'ai_reader'@'%';
